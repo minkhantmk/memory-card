@@ -1,11 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Card = () => {
+const Card = ({text}) => {
   return (
-    <div>
-
-    </div>
+    <GridItem>
+        <p>{text}</p>
+    </GridItem>
   )
 }
+
+const GridItem = styled.div`
+background-color: lightcoral;
+`
 
 export default Card
