@@ -17,6 +17,8 @@ const ScoreBoard = ({current, best}) => {
 
 const Container = styled.div`
 background-color: lightblue;
+padding: 20px;
+margin: 20px 0px;
 `
 
 export default ScoreBoard
