@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import ScoreBoard from './ScoreBoard';
 import Cards from './Cards';
+import Info from './Info';
 import GlobalStyle from './globalStyles';
+import styled from 'styled-components';
 
 function App() {
   const [current, setCurrent] = useState(0);
@@ -37,15 +38,22 @@ function App() {
 
 
   return (
-    <div>
+    <Container>
       <GlobalStyle />
       <h1>Memory Cards</h1>
-      <ScoreBoard current={current} best={best} />
-      <button onClick={incrementCurrent}>Increment</button>
-      <button onClick={gameOver}>Game Over</button>
+      <Info current={current} best={best} />
       <Cards current={current} selectCard={selectCard}></Cards>
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.div`
+width: 70%;
+margin: auto;
+
+h1 {
+  margin: 40px 0px 20px 0px;
+}
+`
 
 export default App;

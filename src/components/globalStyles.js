@@ -50,7 +50,7 @@ table {
 
 :root {
     font-family: 'Roboto', sans-serif;
-	background-color: #C8BEB8;
+	background-color: C8BEB8;
 }
 
 h1 {

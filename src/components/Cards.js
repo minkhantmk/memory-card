@@ -30,6 +30,26 @@ const Cards = ({current, selectCard}) => {
       {
         id: 5,
         src: card1,
+      },
+      {
+        id: 6,
+        src: card1,
+      },
+      {
+        id: 7,
+        src: card1,
+      },
+      {
+        id: 8,
+        src: card1,
+      },
+      {
+        id: 9,
+        src: card1,
+      },
+      {
+        id: 10,
+        src: card1,
       }
     ];
 
@@ -59,7 +79,6 @@ display: grid;
 grid-template-columns: repeat(5, 1fr);
 gap: 20px;
 margin: 20px auto;
-width: 70%;
 
 @media only screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
