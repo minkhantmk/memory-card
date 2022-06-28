@@ -4,44 +4,10 @@ import Cards from './Cards';
 import GlobalStyle from './globalStyles';
 
 function App() {
-  const [cardArray, setCardArray] = useState([]);
   const [current, setCurrent] = useState(0);
   const [best, setBest] = useState(0);
   const [chosen, setChosen] = useState([]);
 
-  useEffect(() => {
-    const cards = [
-      {
-        id: 1,
-        text: "abc"
-      },
-      {
-        id: 2,
-        text: "def"
-      },
-      {
-        id: 3,
-        text: "ghi"
-      },
-      {
-        id: 4,
-        text: "jkl"
-      },
-      {
-        id: 5,
-        text: "mno"
-      }
-    ];
-
-    // shuffle cards and store in new array
-    const shuffled = cards
-    .map(value => ({value, sort: Math.random()}))
-    .sort((a,b) => (a.sort - b.sort))
-    .map(({value}) => value)
-    
-    // set shuffled cards as state
-    setCardArray(shuffled);
-  }, [current])
 
 
   const incrementCurrent = () => {
@@ -77,7 +43,7 @@ function App() {
       <ScoreBoard current={current} best={best} />
       <button onClick={incrementCurrent}>Increment</button>
       <button onClick={gameOver}>Game Over</button>
-      <Cards cards={cardArray} selectCard={selectCard}></Cards>
+      <Cards current={current} selectCard={selectCard}></Cards>
     </div>
   );
 }
