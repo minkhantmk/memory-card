@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Card = ({ id, src, text, selectCard}) => {
-    console.log(src);
     return (
         <GridItem onClick={() => selectCard(id)}>
             <img src={src} alt="memory card"></img>
@@ -12,7 +11,7 @@ const Card = ({ id, src, text, selectCard}) => {
 }
 
 const GridItem = styled.div`
-background-color: #fff;
+background-color: ${({theme}) => theme.colors.cards};
 border-radius: 20px;
 text-align: center;
 padding: 20px;

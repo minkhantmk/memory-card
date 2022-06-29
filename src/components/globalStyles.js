@@ -1,9 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import background from '../images/background.png';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,12 +47,25 @@ table {
 }
 
 :root {
-    font-family: 'Roboto', sans-serif;
-	background-color: C8BEB8;
+	background-image: url(${background});
+	background-size: cover;
 }
 
 h1 {
-    font-size: 3rem;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 3rem;
+	color: #167261;
+}
+
+h2, p {
+	font-family: 'Lato', sans-serif;
+	color: #167261;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 1.2rem;
 }
 `
 
